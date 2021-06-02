@@ -1,0 +1,14 @@
+{
+    "useWorkspaces": true,
+    "packages": ["packages/*"],
+    "version": "independent",
+    "command": {
+        "publish": {
+            "conventionalCommits": true
+        }
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://npm.pkg.github.com/"
+    }
+}
