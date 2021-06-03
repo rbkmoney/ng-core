@@ -1,28 +1,16 @@
 {
   "name": "@rbkmoney/id-generator",
   "version": "0.0.1",
-  "description": "ID Generator",
-  "author": "rbkmoney",
-  "main": "lib/public-api",
-  "types": "lib/public-api",
-  "files": [
-    "lib"
-  ],
   "scripts": {
-    "build": "npm run clean & tsc -p tsconfig.json",
-    "clean": "shx rm -rf lib",
-    "test": "ts-node ../../node_modules/jasmine/bin/jasmine src/**/*.spec.ts --reporter=jasmine-console-reporter"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rbkmoney/ng-core"
+    "build": "ng build",
+    "postpublish": "rm -rf dist/"
   },
   "peerDependencies": {
-    "@angular/common": "^11.2.9",
-    "@angular/core": "^11.2.9"
+    "@angular/common": "^11.2.14",
+    "@angular/core": "^11.2.14"
   },
   "dependencies": {
-    "short-uuid": "^4.1.0",
-    "tslib": "^2.1.0"
+    "short-uuid": "^4.2.0",
+    "tslib": "^2.0.0"
   }
 }

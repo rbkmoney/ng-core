@@ -1,73 +1,27 @@
-# Frontend Angular Libs Monorepo
+# NgCore
 
--   NPM >7 ([Workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces))
--   [Lerna](https://github.com/lerna/lerna)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.13.
 
--   CommitLint
--   [Prettier](https://prettier.io/)
--   ESLint
+## Development server
 
-## Installation
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-1.  Add `.npmrc` file into your project root directory
+## Code scaffolding
 
-    ```sh
-    @rbkmoney:registry=https://npm.pkg.github.com/
-    ```
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-1.  [Authenticate to GitHub Packages](https://help.github.com/en/github/managing-packages-with-github-packages/configuring-npm-for-use-with-github-packages#authenticating-to-github-packages)
+## Build
 
-1.  Install
-    ```sh
-    npm i '@rbkmoney/<PACKAGE_NAME>'
-    ```
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Contributing
+## Running unit tests
 
-### Installation
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-```shell
-npx lerna bootstrap
-```
+## Running end-to-end tests
 
-### Deps management
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
--   [Add](https://github.com/lerna/lerna/tree/main/commands/add)
-    ```shell
-    lerna add <package>[@version] [--dev] [--exact] [--peer]
-    ```
+## Further help
 
-### Versioning & GIT Commits
-
-[ConventionalCommits](https://www.conventionalcommits.org/)
-
--   **fix:** a commit of the type fix patches a bug in your codebase (this correlates with PATCH in Semantic Versioning).
--   **feat:** a commit of the type feat introduces a new feature to the codebase (this correlates with MINOR in Semantic Versioning).
--   **BREAKING CHANGE:** a commit that has a footer BREAKING CHANGE:, or appends a ! after the type/scope, introduces a breaking API change (correlating with MAJOR in Semantic Versioning). A BREAKING CHANGE can be part of commits of any type.
--   types other than fix: and feat: are allowed, for example @commitlint/config-conventional (based on the the Angular convention) recommends build:, chore:, ci:, docs:, style:, refactor:, perf:, test:, and others.
--   footers other than BREAKING CHANGE: <description> may be provided and follow a convention similar to git trailer format.
-
-### Development
-
-Linking to the project that needs
-
-```sh
-npm link '<PATH>/fe-core/packages/<PACKAGE_DIR>'
-
-# Example:
-# npm link '../fe-core/packages/utils'
-```
-
-### Publish
-
-**is now performed automatically on CI**
-
-1.  Bump prerelease every time you push
-    ```sh
-    npm run versionup
-    ```
-1.  Bump release & publish before merge into master
-    ```shell
-    npm run release-versionup
-    npm run release-publish
-    ```
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
