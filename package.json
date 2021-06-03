@@ -16,6 +16,9 @@
     "type": "git",
     "url": "https://github.com/rbkmoney/ng-core"
   },
+  "workspaces": [
+    "projects/*"
+  ],
   "dependencies": {
     "@angular/animations": "~11.2.14",
     "@angular/common": "~11.2.14",
