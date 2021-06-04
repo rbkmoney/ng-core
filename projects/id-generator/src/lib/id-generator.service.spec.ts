@@ -1,10 +1,16 @@
 import { IdGeneratorService } from './id-generator.service';
+import {TestBed} from "@angular/core/testing";
 
 describe('IdGeneratorService', () => {
   let service: IdGeneratorService;
 
   beforeEach(() => {
-    service = new IdGeneratorService();
+    TestBed.configureTestingModule({
+      providers: [
+        IdGeneratorService
+      ]
+    });
+    service = TestBed.inject(IdGeneratorService);
   });
 
   it('should be created', () => {
