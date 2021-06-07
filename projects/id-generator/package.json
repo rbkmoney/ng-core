@@ -1,0 +1,16 @@
+{
+  "name": "@rbkmoney/id-generator",
+  "version": "0.1.0-pr1.0",
+  "scripts": {
+    "build": "ng build",
+    "postpublish": "rm -rf dist/"
+  },
+  "peerDependencies": {
+    "@angular/common": "^11.2.14",
+    "@angular/core": "^11.2.14"
+  },
+  "dependencies": {
+    "short-uuid": "^4.2.0",
+    "tslib": "^2.0.0"
+  }
+}
