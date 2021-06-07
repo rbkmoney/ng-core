@@ -8,7 +8,7 @@
 npm i --save @rbkmoney/id-generator
 ```
 
-Full details in the [monorepo root README.md](https://github.com/rbkmoney/fe-core#installation)
+Full details in the [monorepo root README.md](https://github.com/rbkmoney/ng-core#installation)
 
 ## Usage
 
