@@ -1,24 +1,33 @@
-# IdGenerator
+# ID Generator
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14.
+**The library for ID generation.**
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name --project id-generator` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project id-generator`.
-> Note: Don't forget to add `--project id-generator` or else it will be added to the default project in your `angular.json` file. 
+```sh
+npm i --save @rbkmoney/id-generator
+```
 
-## Build
+Full details in the [monorepo root README.md](https://github.com/rbkmoney/fe-core#installation)
 
-Run `ng build id-generator` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Usage
 
-## Publishing
+-   Inject service to your service
 
-After building your library with `ng build id-generator`, go to the dist folder `cd dist/id-generator` and run `npm publish`.
+```typescript
+import { IdGeneratorService } from '@rbkmoney/id-generator';
 
-## Running unit tests
+constructor(private idGenerator: IdGeneratorService) {}
+```
 
-Run `ng test id-generator` to execute the unit tests via [Karma](https://karma-runner.github.io).
+-   Call the methods you want
 
-## Further help
+```typescript
+const uuid = this.idGenerator.uuid();
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+const shortUuid = this.idGenerator.shortUuid();
+```
+
+## Contributing
+
+Full details in the [monorepo root README.md](https://github.com/rbkmoney/ng-core#contributing)
