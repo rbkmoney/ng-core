@@ -1,6 +1,6 @@
 {
   "name": "@rbkmoney/id-generator",
-  "version": "0.1.0",
+  "version": "0.1.1-pr4.0",
   "scripts": {
     "build": "ng build",
     "postpublish": "rm -rf dist/"
