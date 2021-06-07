@@ -7,7 +7,7 @@
     "test": "ng test --browsers=ChromeHeadless --watch=false",
     "lint": "ng lint",
     "versionup": "lerna version --no-commit-hooks --conventional-prerelease --no-changelog --preid pr --yes",
-    "release": "run-s build release-versionup release-publish",
+    "release": "run-s release-versionup build release-publish",
     "release-versionup": "lerna version --no-commit-hooks --conventional-graduate --yes",
     "release-publish": "lerna publish --contents dist from-package --no-commit-hooks --no-verify-access --yes"
   },
