@@ -5,6 +5,13 @@
     "build": "ng build",
     "postpublish": "rm -rf dist/"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rbkmoney/ng-core"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@rbkmoney"
+  },
   "peerDependencies": {
     "@angular/common": "^11.2.14",
     "@angular/core": "^11.2.14"
