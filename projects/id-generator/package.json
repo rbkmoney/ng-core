@@ -1,9 +1,16 @@
 {
   "name": "@rbkmoney/id-generator",
-  "version": "0.1.0",
+  "version": "0.1.0-pr3.1",
   "scripts": {
     "build": "ng build",
     "postpublish": "rm -rf dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rbkmoney/ng-core"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@rbkmoney"
   },
   "peerDependencies": {
     "@angular/common": "^11.2.14",
