@@ -15,7 +15,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: jwalton/gh-find-current-pr@v1
+      - name: Get current PR
+        uses: jwalton/gh-find-current-pr@v1
         id: pr
       - name: Fetch with tags
         run: |
@@ -29,6 +30,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
+          scope: @rbkmoney
       - name: Git Identity
         run: |
           git config --global user.name 'github-actions[bot]'
