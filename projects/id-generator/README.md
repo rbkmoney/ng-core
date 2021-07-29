@@ -1,4 +1,4 @@
-# ID Generator
+# Id Generator
 
 **The library for ID generation.**
 
