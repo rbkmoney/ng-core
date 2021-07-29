@@ -38,7 +38,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install
-        run: echo -e "//npm.pkg.github.com/:_authToken=$(GITHUB_TOKEN)" >> .npmrc && npx lerna bootstrap
+        run: npx lerna bootstrap
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       - name: Check
         run: npm run ci:check
       - name: Build
