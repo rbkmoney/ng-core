@@ -7,9 +7,17 @@ on:
       - release
 
 permissions:
+  actions: write
+  checks: write
+  contents: write
+  deployments: write
+  issues: write
+  metadata: read
   packages: write
-  pull-requests: read
+  pull-requests: write
   repository-projects: write
+  security-events: write
+  statuses: write
 
 jobs:
   build:
