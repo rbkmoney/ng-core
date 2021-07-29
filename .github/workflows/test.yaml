@@ -42,7 +42,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       - name: Check
-        run: npm run ci:check
+        run: npm run prettier
       - name: Build
         run: npm run build
       - name: Test
