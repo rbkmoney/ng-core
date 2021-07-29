@@ -30,7 +30,6 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
-          scope: '@rbkmoney'
       - name: Git Identity
         run: |
           git config --global user.name 'github-actions[bot]'
@@ -39,9 +38,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install
-        run: npx lerna bootstrap
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: echo -e "//npm.pkg.github.com/:_authToken=$(GITHUB_TOKEN)" >> .npmrc && npx lerna bootstrap
       - name: Check
         run: npm run ci:check
       - name: Build
