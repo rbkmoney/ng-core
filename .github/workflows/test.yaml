@@ -12,7 +12,6 @@ permissions:
   contents: write
   deployments: write
   issues: write
-  metadata: read
   packages: write
   pull-requests: write
   repository-projects: write
