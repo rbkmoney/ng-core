@@ -1,51 +1,39 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": false
-  },
-  "version": 1,
-  "newProjectRoot": "projects",
-  "projects": {
-    "id-generator": {
-      "projectType": "library",
-      "root": "projects/id-generator",
-      "sourceRoot": "projects/id-generator/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "tsConfig": "projects/id-generator/tsconfig.lib.json",
-            "project": "projects/id-generator/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/id-generator/tsconfig.lib.prod.json"
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "cli": {
+        "analytics": false
+    },
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+        "id-generator": {
+            "projectType": "library",
+            "root": "projects/id-generator",
+            "sourceRoot": "projects/id-generator/src",
+            "prefix": "lib",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:ng-packagr",
+                    "options": {
+                        "tsConfig": "projects/id-generator/tsconfig.lib.json",
+                        "project": "projects/id-generator/ng-package.json"
+                    },
+                    "configurations": {
+                        "production": {
+                            "tsConfig": "projects/id-generator/tsconfig.lib.prod.json"
+                        }
+                    }
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "main": "projects/id-generator/src/test.ts",
+                        "tsConfig": "projects/id-generator/tsconfig.spec.json",
+                        "karmaConfig": "projects/id-generator/karma.conf.js"
+                    }
+                }
             }
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/id-generator/src/test.ts",
-            "tsConfig": "projects/id-generator/tsconfig.spec.json",
-            "karmaConfig": "projects/id-generator/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/id-generator/tsconfig.lib.json",
-              "projects/id-generator/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
-      }
-    }
-  },
-  "defaultProject": "id-generator"
+    },
+    "defaultProject": "id-generator"
 }
