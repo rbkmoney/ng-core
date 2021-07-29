@@ -27,7 +27,7 @@ jobs:
       - name: Setup Node ${{ matrix.node_version }}
         uses: actions/setup-node@v1
         with:
-          node-version: 15
+          node-version: 16
           registry-url: https://npm.pkg.github.com/
       - name: Git Identity
         run: |
@@ -38,6 +38,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install
         run: npx lerna bootstrap
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check
         run: npm run ci:check
       - name: Build
