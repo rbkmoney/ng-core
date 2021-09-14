@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "prepare": "husky install",
-    "build": "ng build",
+    "build": "ng build id-generator && ng build sentry",
     "test": "ng test --browsers=ChromeHeadless --watch=false",
     "fix": "npm run prettier-fix",
     "parallel-cmd": "concurrently --prefix-colors magenta,green",
@@ -42,6 +42,7 @@
     "@angular-eslint/eslint-plugin": "^12.3.1",
     "@angular/cli": "~12.1.4",
     "@angular/compiler-cli": "~12.1.4",
+    "@commitlint/config-conventional": "^13.1.0",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",

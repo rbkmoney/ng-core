@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/sentry",
+  "dest": "dist",
   "allowedNonPeerDependencies": [
     "@sentry/angular",
     "@sentry/integrations",

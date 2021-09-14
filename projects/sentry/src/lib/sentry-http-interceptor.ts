@@ -1,7 +1,6 @@
 import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { setTag } from '@sentry/angular';
-import isNil from 'lodash-es/isNil';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
@@ -18,7 +17,7 @@ export class SentryHttpInterceptor implements HttpInterceptor {
 
     private interceptRequest(req: HttpRequest<unknown>): void {
         const xRequestId = req.headers.get('x-request-id');
-        if (!isNil(xRequestId)) {
+        if (!xRequestId) {
             setTag('x-request-id', xRequestId);
         }
     }

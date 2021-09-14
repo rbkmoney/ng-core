@@ -1,12 +1,11 @@
 import * as Sentry from '@sentry/angular';
 import { BrowserOptions } from '@sentry/browser/dist/backend';
 import { Integrations } from '@sentry/tracing';
-import isNil from 'lodash-es/isNil';
 
 export type InitSentryOptions = BrowserOptions;
 
 export const initSentry = (options: InitSentryOptions): void => {
-    if (isNil(options.dsn)) {
+    if (!options.dsn) {
         return null;
     }
     Sentry.init({
