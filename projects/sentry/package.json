@@ -1,6 +1,17 @@
 {
   "name": "@rbkmoney/sentry",
   "version": "0.0.0",
+  "scripts": {
+    "build": "ng build",
+    "postpublish": "rm -rf dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rbkmoney/ng-core"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@rbkmoney"
+  },
   "peerDependencies": {
     "@angular/common": "^12.1.0",
     "@angular/core": "^12.1.0"
