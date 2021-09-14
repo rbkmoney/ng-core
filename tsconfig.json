@@ -6,7 +6,14 @@
         "sourceMap": true,
         "declaration": false,
         "paths": {
-            "id-generator": ["dist/id-generator/id-generator", "dist/id-generator"]
+            "id-generator": [
+              "dist/id-generator/id-generator",
+              "dist/id-generator"
+            ],
+            "sentry": [
+              "dist/sentry/sentry",
+              "dist/sentry"
+            ]
         },
         "downlevelIteration": true,
         "experimentalDecorators": true,
