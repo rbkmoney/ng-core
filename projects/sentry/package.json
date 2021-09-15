@@ -1,6 +1,6 @@
 {
   "name": "@rbkmoney/sentry",
-  "version": "0.0.0",
+  "version": "0.0.1-pr9.0",
   "scripts": {
     "build": "ng build",
     "postpublish": "rm -rf dist/"
