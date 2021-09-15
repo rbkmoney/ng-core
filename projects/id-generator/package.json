@@ -1,6 +1,6 @@
 {
   "name": "@rbkmoney/id-generator",
-  "version": "0.2.1-pr9.0",
+  "version": "0.2.1",
   "description": "ID generator",
   "author": "rbkmoney",
   "scripts": {
