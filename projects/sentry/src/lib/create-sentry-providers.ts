@@ -2,14 +2,17 @@ import { ErrorHandler, Provider } from '@angular/core';
 import { Router } from '@angular/router';
 import { ErrorHandlerOptions, TraceService } from '@sentry/angular';
 
-import { ErrorHandlerService as CustomErrorHandlerService } from './error-handler.service';
+import { ErrorHandler as CustomErrorHandler } from './error-handler';
 
-export function createSentryProviders(options?: ErrorHandlerOptions): Provider[] {
+export function createSentryProviders(deps: [typeof Router], options?: ErrorHandlerOptions): Provider[] {
     return [
         {
             provide: ErrorHandler,
-            useFactory: () => new CustomErrorHandlerService(options),
+            useFactory: () => new CustomErrorHandler(options),
         },
-        { provide: TraceService, deps: [Router] },
+        {
+            provide: TraceService,
+            deps,
+        },
     ];
 }
