@@ -5,7 +5,6 @@ import { isChunkLoadError } from './utils';
 
 export class ErrorHandler extends SentryErrorHandler {
     handleError(error: unknown): void {
-        console.log('error handled', error);
         this.handleChunkLoadError(error);
         super.handleError(error);
     }
